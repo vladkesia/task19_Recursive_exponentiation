@@ -1,8 +1,7 @@
 function degree(number,stepen) {
-    if(!isNaN(number) && !isNaN(stepen) && number !==null && stepen!==null) {
+    if(!isNaN(number) && !isNaN(stepen) && number !==null && stepen!==null && stepen > 0) {
         return (stepen === 1) ? number : (number * degree(number, stepen - 1))
-    }else {
-        return new Error('в функцію должни вносится только числа')
     }
+        return new Error('в функцію должни вносится только числа більше 0')
 }
-console.log(degree(2,2))
+console.log(degree(4,8))
